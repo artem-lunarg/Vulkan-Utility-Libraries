@@ -20,6 +20,14 @@
 #include <cstddef>
 #include <cstring>
 
+typedef void* LPVOID;
+typedef int BOOL;
+typedef struct _SECURITY_ATTRIBUTES {
+    DWORD nLength;
+    LPVOID lpSecurityDescriptor;
+    BOOL bInheritHandle;
+} SECURITY_ATTRIBUTES;
+
 namespace vku {
 
 safe_VkSwapchainCreateInfoKHR::safe_VkSwapchainCreateInfoKHR(const VkSwapchainCreateInfoKHR* in_struct,
